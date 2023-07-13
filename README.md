@@ -12,4 +12,4 @@
     <li>Entre Outros...</li>
 </ul>
 
-<img src="img/Projeto.png" alt="Imagem do Projeto">
+<img src="img/projeto.png" alt="Imagem do Projeto">
