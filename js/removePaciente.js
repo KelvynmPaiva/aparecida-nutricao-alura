@@ -8,3 +8,11 @@ tabela.addEventListener("dblclick", (event) => {
     }, 500)
     
 })
+
+/*
+    Target - É o alvo do clique.
+
+    This - É o elemento que esta atrelado ao evento, o pai do evento.
+
+    parentNode - É o pai do alvo, ou seja, se refere ao elemeto pai do target.
+*/ 
