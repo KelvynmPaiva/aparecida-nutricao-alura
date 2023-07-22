@@ -146,3 +146,18 @@ button[disabled=disabled], button:disabled {
 	opacity: 0;
 	transition: 0.5s;
 }
+
+#label-filtro{
+	font-size: 20px;
+	color: black;
+}
+ 
+#filtrar-tabela{
+	width: 400px;
+	height: 30px;
+	margin: 10px 0 10px 0;
+}
+
+.invisivel{
+	display: none;
+}
