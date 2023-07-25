@@ -3,24 +3,17 @@ let botaoAdicionar = document.querySelector("#adicionar-paciente")
 
 botaoAdicionar.addEventListener('click', (event) => {
     event.preventDefault();
- 
+
     let form = document.querySelector("#form-adiciona");
     let paciente = puxaInformacoes(form);
 
-
-    // Cria tr e td do paciente
-    let pacienteTr = montaTr(paciente)
-
     let erros = validaPaciente(paciente)
-
     if(erros.length > 0 ){
         exibeMensagemDeErro(erros);
         return;
     }
 
-    // Adiciona paciente a tabela
-    let tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
+    adicionaPacienteNaTabela(paciente)
     form.reset() // Limpa o form
 
     //Exclui mensagens de erros anteriores
@@ -28,6 +21,11 @@ botaoAdicionar.addEventListener('click', (event) => {
     ul.innerHTML = "";
 });
 
+function adicionaPacienteNaTabela(paciente){
+    let pacienteTr = montaTr(paciente)
+    let tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+}
 
 function puxaInformacoes(props){
     let paciente = {
@@ -83,3 +81,4 @@ function exibeMensagemDeErro(erros){
         ul.appendChild(li);
     });
 }
+
